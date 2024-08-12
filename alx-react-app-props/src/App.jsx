@@ -62,10 +62,7 @@ function App() {
       <div>
         <Counter />
       </div>
-      <UserProvider value={userData}>
-        <ProfilePage />
-      </UserProvider>
-
+      
 
 
     </>
