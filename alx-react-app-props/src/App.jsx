@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
 import Counter from './components/Counter';
 import ProfilePage from './ProfilePage';
-import { UserProvider } from './UserContext';
+import { UserProvider } from './components/UserContext';
 
 
 
@@ -73,8 +73,16 @@ function App() {
 }
 
 
-export default App
-// src/App.jsx
 
+
+// src/App.jsx
+export default () => {
+  return (
+    <UserProvider value={userData}>
+    <ProfilePage />
+  </UserProvider>
+
+   
+)};
 
 
