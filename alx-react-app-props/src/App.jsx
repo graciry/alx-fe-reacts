@@ -10,7 +10,8 @@ import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
 import Counter from './components/Counter';
 import ProfilePage from './ProfilePage';
-import UserContext, { UserProvider } from './UserContext'; // Make sure this path is correct
+import { UserProvider } from './UserContext';
+
 
 
 
