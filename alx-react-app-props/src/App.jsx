@@ -58,7 +58,9 @@ function App() {
       <UserProvider value={userData}>
         <ProfilePage />
       </UserProvider>
+      <ProfilePage userData={userData} />;
     </>
+
   );
 }
 
