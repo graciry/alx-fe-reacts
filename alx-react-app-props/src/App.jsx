@@ -10,10 +10,7 @@ import Footer from './components/Footer';
 import UserProfile from './components/UserProfile';
 import Counter from './components/Counter';
 import ProfilePage from './components/ProfilePage';
-import UserContext from './components/UserContext';
-
-
-
+import { UserProvider } from './components/UserContext';
 
 
 function App() {
@@ -21,7 +18,9 @@ function App() {
   const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
 
 
+
   return (
+
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -60,16 +59,16 @@ function App() {
       <div>
         <Counter />
       </div>
-      <div>
-        <UserContext.Provider value={userData}>
-          <ProfilePage />
-        </UserContext.Provider>
-      </div>
-      
+      <UserProvider value={userData}>
+        <ProfilePage />
+      </UserProvider>
+
+
 
     </>
   )
 }
+
 
 export default App
 // src/App.jsx

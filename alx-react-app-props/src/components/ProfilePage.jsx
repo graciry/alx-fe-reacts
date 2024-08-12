@@ -1,8 +1,9 @@
+// src/ProfilePage.jsx
 import React from 'react';
 import UserInfo from './UserInfo';
 
 function ProfilePage() {
-  return <UserInfo />;  // This should be UserInfo, not ProfilePage
+  return <UserInfo />;
 }
 
 export default ProfilePage;
