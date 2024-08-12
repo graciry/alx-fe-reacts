@@ -59,6 +59,9 @@ function App() {
         <ProfilePage />
       </UserProvider>
       <ProfilePage userData={userData} />;
+      <UserContext.Provider value={{ name: 'John Doe' }}>
+        {/* Components that consume UserContext */}
+      </UserContext.Provider>
     </>
 
   );
