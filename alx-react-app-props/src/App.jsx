@@ -12,7 +12,7 @@ import Counter from './components/Counter';
 import ProfilePage from './ProfilePage';
 import UserContext, { UserProvider } from './UserContext';
 import React, { useContext } from 'react';
-import UserContext from './UserContext';
+import UserContext from './components/UserContext';
 
 function App() {
   const [count, setCount] = useState(0);
