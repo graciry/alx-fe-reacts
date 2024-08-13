@@ -11,10 +11,13 @@ import UserProfile from './components/UserProfile';
 import Counter from './components/Counter';
 import ProfilePage from './ProfilePage';
 import UserContext, { UserProvider } from './UserContext';
+import React, { useContext } from 'react';
+import UserContext from './UserContext';
 
 function App() {
   const [count, setCount] = useState(0);
   const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+  const { user } = useContext(UserContext);
 
   return (
     <>
@@ -62,9 +65,17 @@ function App() {
       <UserContext.Provider value={{ name: 'John Doe' }}>
         {/* Components that consume UserContext */}
       </UserContext.Provider>
+      <div>
+          {/* Display user information */}
+          <p>Username: {user.username}</p>
+          {/* ... */}
+      </div>
     </>
 
   );
 }
 
 export default App;
+
+  
+
