@@ -8,6 +8,8 @@ import AddRecipeForm from './components/AddRecipeForm';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import RecipeDetails from './components/RecipeDetails';
 import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 
 function App() {
@@ -36,16 +38,18 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Router>
-      <div>
-        <h1>Recipe Sharing Application</h1>
-        <SearchBar />
-        <AddRecipeForm />
-        <Routes>
-          <Route path="/" element={<RecipeList />} />
-          <Route path="/recipe/:id" element={<RecipeDetailsWrapper />} />
-        </Routes>
-      </div>
-    </Router>
+        <div>
+          <h1>Recipe Sharing Application</h1>
+          <FavoritesList />
+          <RecommendationsList />
+          <SearchBar />
+          <AddRecipeForm />
+          <Routes>
+            <Route path="/" element={<RecipeList />} />
+            <Route path="/recipe/:id" element={<RecipeDetailsWrapper />} />
+          </Routes>
+        </div>
+      </Router>
     </>
   )
 }
