@@ -5,6 +5,8 @@ import './App.css'
 import React from 'react';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,13 +33,22 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Router>
       <div>
-      <h1>Recipe Sharing Application</h1>
-      <AddRecipeForm />
-      <RecipeList />
-    </div>
+        <h1>Recipe Sharing Application</h1>
+        <AddRecipeForm />
+        <Routes>
+          <Route path="/" element={<RecipeList />} />
+          <Route path="/recipe/:id" element={<RecipeDetailsWrapper />} />
+        </Routes>
+      </div>
+    </Router>
     </>
   )
 }
+const RecipeDetailsWrapper = () => {
+  const { id } = useParams();
+  return <RecipeDetails recipeId={parseInt(id)} />;
+};
 
 export default App
