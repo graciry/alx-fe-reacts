@@ -9,6 +9,7 @@ import BlogPost from './components/BlogPost';
 import ProtectedRoute from './components/ProtectedRoute';
 import ProfileDetails from './components/ProfileDetails';
 import ProfileSettings from './components/ProfileSettings';
+import Login from './components/Login';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/profile/*" element={<Profile />} />
         <Route path="/blog/:id" element={<BlogPost />} /> 
+        <Route path="/login" element={<Login />} />
         <Route
           path="/profile/*"
           element={

@@ -1,9 +1,17 @@
-import { Navigate } from 'react-router-dom';
+import React from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../hooks/useAuth'; // Import the useAuth hook
 
-function ProtectedRoute({ children }) {
-  const isAuthenticated = false; // Replace with real authentication logic
+const ProtectedRoute = ({ element }) => {
+  const { isAuthenticated } = useAuth();
+  const location = useLocation();
 
-  return isAuthenticated ? children : <Navigate to="/login" />;
-}
+  // If not authenticated, redirect to the login page
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: location }} />;
+  }
+
+  return element;
+};
 
 export default ProtectedRoute;
