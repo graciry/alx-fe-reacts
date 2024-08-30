@@ -1,6 +1,6 @@
 # Form Handling in React
 
-This project demonstrates form handling in React using both controlled components and Formik. The form captures user registration details, including username, email, and password.
+This project demonstrates form handling in React using both controlled components and Formik. The form captures user registration details, including username, email, and password.This is form handling.
 
 ## Features
 
