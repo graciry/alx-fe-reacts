@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth'; // Import the useAuth hook
+import { useAuth } from '../hooks/UseAuth'; // Import the useAuth hook
 
 const ProtectedRoute = ({ element }) => {
   const { isAuthenticated } = useAuth();
