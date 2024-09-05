@@ -3,7 +3,7 @@ import React from 'react';
 
 function UserProfile() {
     return (
-      <div className="user-profile bg-gray-100 sm:p-4 md:p-8 p-4  md:max-w-sm md:text-xl sm:p-8 max-w-xs sm:max-w-sm mx-auto my-20 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      <div className="user-profile bg-gray-100 sm:p-4 md:p-8 p-4  md:max-w-sm md:text-xl  sm:w-24 sm:h-24 md:w-36 md:h-36 sm:p-8 max-w-xs sm:max-w-sm mx-auto my-20 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
           alt="User"
