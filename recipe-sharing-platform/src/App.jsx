@@ -2,12 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { QueryClient, QueryClientProvider } from 'react-query';
-import PostsComponent from './components/PostsComponent';
 
 function App() {
   const [count, setCount] = useState(0)
-  const queryClient = new QueryClient();
 
   return (
     <>
@@ -28,13 +25,9 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
+      <p className="read-the-docs text-blue-500">
         Click on the Vite and React logos to learn more
       </p>
-      <QueryClientProvider client={queryClient}>
-        <PostsComponent />
-      </QueryClientProvider>
-      
     </>
   )
 }
