@@ -1,7 +1,7 @@
 // App.jsx
 import { useState } from 'react';
 import Search from './components/Search';
-import { fetchUserData } from './services/githubService';
+import { fetchUserData } from './services/githubServices';
 
 const App = () => {
   const [userData, setUserData] = useState(null);
